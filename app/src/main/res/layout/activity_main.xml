@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_gallery2"-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/rectangle_2"-->
+    <!--        android:backgroundTint="#FFFFFF"-->
+    <!--        android:foreground="@drawable/apple_photo"-->
+    <!--        android:insetTop="0dp"-->
+    <!--        android:insetBottom="0dp"-->
+    <!--        app:backgroundTint="#333232"-->
+    <!--        app:elevation="0dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/btn_takepicture"-->
+    <!--        app:layout_constraintVertical_bias="0.0" />-->
+
+    <Button
+        android:id="@+id/btn_takepicture"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:alpha="0.5"
+        android:background="@drawable/ic_circle_black_24dp"
+        android:backgroundTint="@null"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@null"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_gallery"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:backgroundTint="@color/white"
+        android:elevation="5dp"
+        app:icon="@drawable/ic_photo_library_black_24dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="50dp"
+        app:iconTint="#9370DB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_takepicture"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909"
+        app:rippleColor="@color/btnClick"
+        style="?android:attr/borderlessButtonStyle"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="410dp"
+        android:layout_height="510dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/ic_launcher_background"
+        android:translationY="-30dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_takepicture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texture"
+        app:layout_constraintVertical_bias="0.44"
+        app:srcCompat="@color/a"
+        tools:srcCompat="@color/a" />
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="410dp"
+        android:layout_height="410dp"
+        android:layout_above="@+id/btn_takepicture"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.339" />
+
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_1"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <View
+        android:id="@+id/rectangle_"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_1"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019"
+        tools:visibility="invisible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_pre"
+        android:layout_width="410dp"
+        android:layout_height="410dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/texture"
+        app:srcCompat="@drawable/rectangle_1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_change"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/white"
+        android:elevation="5dp"
+        app:icon="@drawable/ic_change_circle_black_24dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="50dp"
+        app:iconTint="#9370DB"
+        app:layout_constraintBottom_toTopOf="@+id/texture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="@+id/iv_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564"
+        app:rippleColor="@color/btnClick"
+        style="?android:attr/borderlessButtonStyle"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleGroup"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:checkedButton="@+id/re720"
+        app:layout_constraintBottom_toTopOf="@+id/btn_takepicture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texture">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/re720"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="720"
+            app:rippleColor="@color/btnClick"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/re960"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="960"
+            app:rippleColor="@color/btnClick"
+            app:layout_constraintStart_toEndOf="@+id/re1080"
+            tools:layout_editor_absoluteY="21dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/re1080"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1080"
+            app:rippleColor="@color/btnClick"
+            app:layout_constraintStart_toEndOf="@+id/re720"
+            tools:layout_editor_absoluteY="13dp" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <ToggleButton
+        android:id="@+id/btn_preview"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:checked="false"
+        android:text="ON"
+        android:textOff="ON"
+        android:textOn="OFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toEndOf="@+id/btn_takepicture"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_"
+        app:layout_constraintVertical_bias="0.908" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
